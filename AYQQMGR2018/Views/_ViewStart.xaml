@@ -1,0 +1,129 @@
+﻿<control:AyWindow x:Class="AYQQMGR2018.Views._ViewStart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+      xmlns:control="http://www.ayjs.net/controls"    TitleBarHeight="0" 
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"   SnapsToDevicePixels="True" UseLayoutRounding="True"
+      xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+      xmlns:controller="clr-namespace:AYQQMGR2018.Controllers"  CloseButtonMargin="0,1,1,0"
+            Loaded="AyWindow_Loaded" 
+        TitleVisibility="Collapsed" Icon="/AYQQMGR2018;component/Contents/Icons/ayui_48.ico"  BorderThickness="1" BorderBrush="{DynamicResource Ay.Brush14}"
+        Title="MainWindow" Height="598" Width="919" MinHeight="598" MinWidth="919" MaxHeight="598" MaxWidth="919" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  MaxButtonVisibility="Collapsed"
+      xmlns:local="clr-namespace:AYQQMGR2018.Views" 
+                        xmlns:shared="clr-namespace:AYQQMGR2018.Views.Shared" 
+      mc:Ignorable="d" 
+      >
+
+
+    <control:AyWindow.DataContext>
+        <controller:ViewStartController />
+    </control:AyWindow.DataContext>
+    <control:AyWindow.WindowMenu>
+        <ContextMenu>
+            <MenuItem Header="AYUI官网" InputGestureText="Ctrl+G" Click="MenuItem_Click_1">
+                <MenuItem.Icon>
+                    <Image Height="18" Source="pack://application:,,,/Ay.MvcFramework.Wpf;component/Resources/app.ico" Stretch="Uniform" Width="18"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="反馈中心" >
+                <MenuItem.Icon>
+                    <control:AyImageButton  Height="19" Width="18" RenderMode="Manner" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11540.png"
+                               PressedIcon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11541.png"
+                               HoverIcon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11541.png" />
+
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="设置中心" >
+                <MenuItem.Icon>
+                    <control:AyImageButton  Height="19" Width="18" RenderMode="Manner" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11569.png"
+                               PressedIcon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11570.png"
+                               HoverIcon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11570.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="检查更新" >
+                <MenuItem.Icon>
+                    <control:AyImageButton  Height="19" Width="18" RenderMode="Manner" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11552.png"
+                               PressedIcon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11553.png"
+                               HoverIcon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11553.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="新增功能" >
+                <MenuItem.Icon>
+                    <control:AyImageButton  Height="19" Width="18" RenderMode="Manner" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11556.png"
+                               PressedIcon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11557.png"
+                               HoverIcon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/windowmenu/11557.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+
+            <Separator/>
+            <MenuItem Header="帮助" >
+            </MenuItem>
+            <MenuItem Header="退出" Click="MenuItem_Click">
+            </MenuItem>
+        </ContextMenu>
+    </control:AyWindow.WindowMenu>
+    
+    <Grid Margin="0,0,0,0" x:Name="ay" Background="Transparent" MouseLeftButtonDown="Ay_MouseLeftButtonDown">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="67"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <control:TaskbarIcon  x:Name="ayWinTool"
+                  IconSource="/AYQQMGR2018;component/Contents/Icons/ayui_48.ico"
+                  ToolTipText="Ay制作的电脑管家实时保护" MenuActivation="LeftClick" PopupActivation="RightClick" >
+            <control:TaskbarIcon.TrayPopup>
+                <shared:UcMainWindowToolBarIcon Width="195" Height="497"/>
+            </control:TaskbarIcon.TrayPopup>
+        </control:TaskbarIcon>
+        <Border x:Name="layoutMain"  Margin="0,15,0,0" Opacity="0">
+
+        </Border>
+        <Canvas>
+            <Ellipse HorizontalAlignment="Left" Height="38" Canvas.Left="5" Canvas.Top="5" Stroke="White" VerticalAlignment="Top" Width="38" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Contents/Images/demoHeader.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Canvas Canvas.Left="108" Canvas.Top="36" >
+                <control:NineGridBorder ImageMargin="18,0,9,0" x:Name="ngbDollar" Image="pack://application:,,,/AYQQMGR2018;component/Contents/Images/dollarStatic.png" Width="65" Height="13" Canvas.Left="-10" Canvas.Top="-4"></control:NineGridBorder>
+                <control:AyIconAll Canvas.Left="8"  Panel.ZIndex="1"  Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/lv9.png" IsBitmapImage="True"></control:AyIconAll>
+                <control:AyIconAll Canvas.Left="16" Panel.ZIndex="1"  Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/lv7.png" IsBitmapImage="True"></control:AyIconAll>
+                <control:AyIconAll Canvas.Left="24" Panel.ZIndex="1"  Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/lv2.png" IsBitmapImage="True"></control:AyIconAll>
+                <control:AyIconAll Canvas.Left="32" Panel.ZIndex="1"  Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/lv5.png" IsBitmapImage="True"></control:AyIconAll>
+                <control:AyIconAll Canvas.Left="40" Panel.ZIndex="1"  Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/lv4.png" IsBitmapImage="True"></control:AyIconAll>
+                <Rectangle Fill="Transparent" Width="65" Cursor="Hand" Height="13" Canvas.Left="-10" Panel.ZIndex="10" Canvas.Top="-4" MouseEnter="Canvas_MouseEnter" MouseLeave="Canvas_MouseLeave"></Rectangle>
+            </Canvas>
+            <Canvas Canvas.Left="77" Canvas.Top="36" >
+                <control:AyIconAll  Panel.ZIndex="1"  Icon="pack://application:,,,/AYQQMGR2018;component/Contents/Images/lv9.png" IsBitmapImage="True"></control:AyIconAll>
+                <control:NineGridBorder x:Name="ngbLevel" ImageMargin="18,0,9,0"  Canvas.Top="-4" Image="pack://application:,,,/AYQQMGR2018;component/Contents/Images/lvStatic.png" Width="36" Height="13" Canvas.Left="-22"></control:NineGridBorder>
+                <Rectangle x:Name="levelRec" Fill="Transparent" Width="36" Cursor="Hand" Height="13" Canvas.Left="-22" Panel.ZIndex="10" Canvas.Top="-4" MouseEnter="levelRec_MouseEnter" MouseLeave="levelRec_MouseLeave"></Rectangle>
+            </Canvas>
+            <TextBlock Canvas.Left="57" SnapsToDevicePixels="True" Canvas.Top="8" Foreground="White" FontSize="14" UseLayoutRounding="True">AY电脑管家</TextBlock>
+        </Canvas>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <control:AyNavRadioButton GroupName="mainNav" x:Name="rdo1" FontSize="14" Checked="rdo1_Checked" IsChecked="{Binding Model.ViewIndex}" Tag="/Views/Index/IndexView.xaml"
+                     Content="首页体检"  Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12062.png" HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12056.png" PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12188.png"
+                      Width="153" Height="67" Style="{StaticResource AyQQMgrNavStyle}"/>
+            <control:AyNavRadioButton GroupName="mainNav"  x:Name="rdo2" FontSize="14" Checked="rdo1_Checked" Tag="/Views/KillVirus/KillVirusView.xaml" IsChecked="{Binding Model.ViewShaDu}"
+                     Content="病毒查杀"   Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12066.png" HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12060.png" PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12192.png"
+                      Width="153" Height="67" Style="{StaticResource AyQQMgrNavStyle}"/>
+            <control:AyNavRadioButton GroupName="mainNav" x:Name="rdo3" FontSize="14" Checked="rdo1_Checked" Tag="/Views/ClearGarbage/ClearGarbageView.xaml" IsChecked="{Binding Model.ViewLaJi}"
+                     Content="清理垃圾"   Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12061.png" HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12055.png" PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12187.png"
+                      Width="153" Height="67" Style="{StaticResource AyQQMgrNavStyle}"/>
+            <control:AyNavRadioButton GroupName="mainNav" x:Name="rdo4" FontSize="14" Checked="rdo1_Checked" Tag="/Views/PcUp/PcUpView.xaml" IsChecked="{Binding Model.ViewJiaSu}"
+                     Content="电脑加速"   Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12064.png" HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12058.png" PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12190.png"
+                      Width="153" Height="67" Style="{StaticResource AyQQMgrNavStyle}"/>
+            <control:AyNavRadioButton GroupName="mainNav" x:Name="rdo5" FontSize="14" Checked="rdo1_Checked" Tag="/Views/SoftwareAnalysis/SoftwareAnalysisView.xaml" IsChecked="{Binding Model.ViewFenXi}"
+                     Content="软件分析"   Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12063.png" HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12057.png" PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12189.png"
+                      Width="153" Height="67" Style="{StaticResource AyQQMgrNavStyle}"/>
+            <control:AyNavRadioButton GroupName="mainNav" x:Name="rdo6" FontSize="14" Checked="rdo1_Checked" Tag="/Views/ToolBox/ToolBoxView.xaml" IsChecked="{Binding Model.ViewZhenSuo}"
+                     Content="工具箱"   Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12065.png" HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12059.png" PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/12191.png"
+                      Width="153" Height="67" Style="{StaticResource AyQQMgrNavStyle}"/>
+        </StackPanel>
+
+
+    </Grid>
+</control:AyWindow>

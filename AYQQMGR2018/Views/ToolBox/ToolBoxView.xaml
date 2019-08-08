@@ -1,0 +1,122 @@
+﻿<AyPage x:Class="AYQQMGR2018.Views.ToolBox.ToolBoxView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:md="clr-namespace:AYQQMGR2018.Models"
+      xmlns:control="http://www.ayjs.net/controls"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+      xmlns:controller="clr-namespace:AYQQMGR2018.Controllers"
+     xmlns:shared="clr-namespace:AYQQMGR2018.Views.Shared"
+      xmlns:local="clr-namespace:AYQQMGR2018.Views.ToolBox"
+      mc:Ignorable="d"
+      d:DesignHeight="600"
+      d:DesignWidth="1200"
+      >
+    <AyPage.DataContext>
+        <controller:ToolBoxController />
+    </AyPage.DataContext>
+    <Canvas Margin="0,0,0,0" Background="Transparent" ClipToBounds="True">
+        <Canvas Width="960" Height="120">
+            <control:AyIconAll Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/toolboxh.png" IsBitmapImage="True" Canvas.Left="60" Canvas.Top="70"></control:AyIconAll>
+            <Label  Canvas.Left="160" Canvas.Top="68" FontWeight="UltraLight"  Style="{StaticResource QQFont}" FontSize="32" Foreground="#FFFFFF">AY的电脑有新的软件可更新</Label>
+        </Canvas>
+        <Canvas Canvas.Top="149" Width="960" Height="382">
+            <StackPanel Width="89">
+                <RadioButton  GroupName="mainNav" Style="{StaticResource AyQQMgrToolBoxNavStyle}" Margin="-4,0,0,0" IsChecked="True" Checked="RadioButton_Checked" Tag="changyongBorder">常用</RadioButton>
+                <RadioButton  GroupName="mainNav" Style="{StaticResource AyQQMgrToolBoxNavStyle}" Margin="-4,0,0,0" Checked="RadioButton_Checked" Tag="shangwangBorder">上网</RadioButton>
+                <RadioButton  GroupName="mainNav" Style="{StaticResource AyQQMgrToolBoxNavStyle}" Margin="-4,0,0,0" Checked="RadioButton_Checked" Tag="xitongBorder">系统</RadioButton>
+                <RadioButton  GroupName="mainNav" Style="{StaticResource AyQQMgrToolBoxNavStyle}" Margin="-4,0,0,0" Checked="RadioButton_Checked" Tag="ruanjianBorder">软件</RadioButton>
+                <RadioButton  GroupName="mainNav" Style="{StaticResource AyQQMgrToolBoxNavStyle}" Margin="-4,0,0,0" Checked="RadioButton_Checked" Tag="qitaBorder">其他</RadioButton>
+            </StackPanel>
+
+            <!--<Border BorderBrush="{StaticResource QQ.ToolBox.Left.Border.Brush}" BorderThickness="1,0,0,0" DockPanel.Dock="Right" Panel.ZIndex="3" Background="{StaticResource QQ.ToolBox.Left.Check.Brush}">-->
+            <control:AyScrollViewer Style="{StaticResource NuclearScrollViewer}" x:Name="svToolBox"  Height="382" Width="829"  Canvas.Left="89" Background="{StaticResource QQ.ToolBox.Left.Check.Brush}" Padding="22,0,46,0">
+                <StackPanel VirtualizingStackPanel.IsVirtualizing="False" x:Name="mainContent">
+                    <Border x:Name="changyongBorder"></Border>
+                    <TextBlock Style="{StaticResource BaseTextBlock}" Margin="0,24,0,0" x:Name="changyong">常用</TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                        <shared:AyToolBoxRightButton  Content="软件管理" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/changyong/QQPCSoftMgr.png" Click="AyToolBoxRightButton_Click"/>
+                        <shared:AyToolBoxRightButton  Content="电脑诊所" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/changyong/QQPCClinic.png"/>
+                        <shared:AyToolBoxRightButton  Content="修复漏洞" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/changyong/QQPCLeakScan.png"/>
+                        <shared:AyToolBoxRightButton  Content="游戏加速" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/changyong/QMGameSpeedup.png"/>
+                        <shared:AyToolBoxRightButton  Content="应用宝" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/changyong/QQPCB1AndroidJmp.png"/>
+                        <shared:AyToolBoxRightButton  Content="测试网速" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/changyong/QMNetSpeedTest.png"/>
+                        <shared:AyToolBoxRightButton  Content="硬件检测" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/changyong/HWPlugin.png"/>
+                        <shared:AyToolBoxRightButton  Content="浏览器保护" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/changyong/IEStartPage.png"/>
+                    </StackPanel>
+                    <Border BorderThickness="0,1,0,0" Margin="0,5,0,0" BorderBrush="#D5D7E5"></Border>
+                    <Border x:Name="shangwangBorder"></Border>
+                    <TextBlock Style="{StaticResource BaseTextBlock}" Margin="0,24,0,0" x:Name="shangwang">上网</TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                        <shared:AyToolBoxRightButton  Content="免费WiFi" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/wifigx.png"/>
+                        <shared:AyToolBoxRightButton  Content="路由器管家" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QMRouterPlugin.png"/>
+                        <shared:AyToolBoxRightButton  Content="流量监控" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/NetMon.png"/>
+                        <shared:AyToolBoxRightButton  Content="网速保护" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QMNetflowOpti.png"/>
+                        <shared:AyToolBoxRightButton  Content="DNS优选" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QMDnsPlugin.png"/>
+                        <shared:AyToolBoxRightButton  Content="网络连接" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QMNetConnect.png"/>
+                        <shared:AyToolBoxRightButton  Content="3G流量统计" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QMNetMobileFlux.png"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                        <shared:AyToolBoxRightButton  Content="无线安全助手" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QQPCWifiSafe.png"/>
+                        <shared:AyToolBoxRightButton  Content="网络修复" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QQPCClinicNetRepair.png"/>
+                        <shared:AyToolBoxRightButton  Content="ARP防火墙" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QMArpMgr.png"/>
+                        <shared:AyToolBoxRightButton  Content="网页广告过滤" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QMAdFilter.png"/>
+                        <shared:AyToolBoxRightButton  Content="上网慢" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QQPCClinicNet.png"/>
+                        <shared:AyToolBoxRightButton  Content="微信聊天备份" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/WechatBackup.png"/>
+                        <shared:AyToolBoxRightButton  Content="弹窗拦截" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/shangwang/QMAdBlock.png"/>
+                    </StackPanel>
+                    <Border BorderThickness="0,1,0,0" Margin="0,5,0,0" BorderBrush="#D5D7E5"></Border>
+                    <Border x:Name="xitongBorder"></Border>
+                    <TextBlock Style="{StaticResource BaseTextBlock}" Margin="0,24,0,0" x:Name="xitong">系统</TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                        <shared:AyToolBoxRightButton  Content="系统盘瘦身" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/xitong/QMSysSlim.png"/>
+                        <shared:AyToolBoxRightButton  Content="清理垃圾" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/xitong/SysGarbageJmp.png"/>
+                        <shared:AyToolBoxRightButton  Content="清理痕迹" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/xitong/SysOptimize.png"/>
+                        <shared:AyToolBoxRightButton  Content="开机加速" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/xitong/SysStartupMgrJmp.png"/>
+                        <shared:AyToolBoxRightButton  Content="插件清理" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/xitong/SysMalwareJmp.png"/>
+                        <shared:AyToolBoxRightButton  Content="文件清理" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/xitong/DownloaderMgrUI.png"/>
+                        <shared:AyToolBoxRightButton  Content="开机慢" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/xitong/QQPCClinicSys.png"/>
+                    </StackPanel>
+                    <Border BorderThickness="0,1,0,0" Margin="0,5,0,0" BorderBrush="#D5D7E5"></Border>
+                    <Border x:Name="ruanjianBorder"></Border>
+                    <TextBlock Style="{StaticResource BaseTextBlock}" Margin="0,24,0,0" x:Name="ruanjian">软件</TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                        <shared:AyToolBoxRightButton  Content="软件卸载" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/ruanjian/qqpcuninstalljump.png"/>
+                        <shared:AyToolBoxRightButton  Content="软件升级" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/ruanjian/qqpcupgradejump.png"/>
+                        <shared:AyToolBoxRightButton  Content="软件搬家" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/ruanjian/SoftMove.png"/>
+
+                    </StackPanel>
+                    <Border BorderThickness="0,1,0,0" Margin="0,5,0,0" BorderBrush="#D5D7E5"></Border>
+                    <Border x:Name="qitaBorder"></Border>
+                    <TextBlock Style="{StaticResource BaseTextBlock}" Margin="0,24,0,0" x:Name="qita">其他</TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                        <shared:AyToolBoxRightButton  Content="腾讯手游助手" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/AppMarketPlugin.png"/>
+                        <shared:AyToolBoxRightButton  Content="健康小助手" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/QMHealthAssist.png"/>
+                        <shared:AyToolBoxRightButton  Content="文件粉碎" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/FileSmash.png"/>
+                        <shared:AyToolBoxRightButton  Content="管理右键菜单" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/MenuManager.png"/>
+                        <shared:AyToolBoxRightButton  Content="微云" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/qqpcweiyundiskjmp.png"/>
+                        <shared:AyToolBoxRightButton  Content="照片飞船" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/PhotoCraftPlugin.png"/>
+                        <shared:AyToolBoxRightButton  Content="专家协助" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/RemoteAssistance.png"/>
+                        <shared:AyToolBoxRightButton  Content="KingRoot" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/KingRoot.png"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,136">
+                        <shared:AyToolBoxRightButton  Content="我的手机" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/QQPCB2AndroidJmp.png"/>
+                        <shared:AyToolBoxRightButton  Content="腾讯新闻" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/TencentNews.png"/>
+                        <shared:AyToolBoxRightButton  Content="Win10 检测" Margin="12,0,0,0" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/toolbox/qita/Win10Tips.png"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,0,0,19">
+                        <shared:AyHyberTextBlock Foreground="#3344D8" Margin="0,0,10,0" VerticalAlignment="Center" x:Name="clickLiuYan" FontSize="12" Click="{Binding OpenClickCommand}"  ForegroundStatic="#3344D8" ForegroundMouseEnter="#3344D8" ForegroundPressed="#3344D8" >点击留言</shared:AyHyberTextBlock>
+                        <TextBlock Style="{StaticResource BaseTextBlock}" VerticalAlignment="Center" FontSize="12">期望管家提供更多工具</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </control:AyScrollViewer>
+            <!--</Border>-->
+        </Canvas>
+        <Border Width="89" Height="77" BorderBrush="{StaticResource QQ.ToolBox.Left.Border.Brush}" Canvas.Bottom="0" Canvas.Left="0" BorderThickness="0,0,1,0" Background="{StaticResource QQ.ToolBox.Left.Static.Brush}">
+
+        </Border>
+    </Canvas>
+
+</AyPage>

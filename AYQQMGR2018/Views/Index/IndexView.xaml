@@ -1,0 +1,96 @@
+﻿<AyPage x:Class="AYQQMGR2018.Views.Index.IndexView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:md="clr-namespace:AYQQMGR2018.Models"
+      xmlns:control="http://www.ayjs.net/controls"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+      xmlns:controller="clr-namespace:AYQQMGR2018.Controllers"
+      xmlns:local="clr-namespace:AYQQMGR2018.Views.Index"
+      mc:Ignorable="d"
+      d:DesignHeight="600"
+      d:DesignWidth="1200"
+      >
+    <AyPage.DataContext>
+        <controller:IndexController />
+    </AyPage.DataContext>
+    <Canvas Margin="0,0,0,0" Background="Transparent" ClipToBounds="True">
+
+        <TextBlock Canvas.Left="347" SnapsToDevicePixels="True" Canvas.Top="134" Foreground="White" FontSize="32" Style="{StaticResource QQFont}" FontWeight="DemiBold" >安全环境，从体检开始</TextBlock>
+
+
+
+
+
+
+        <Button Content="全面体检" Click="AyAnimationButton_Click" ToolTip="全面体检" FontSize="28" Width="179" Height="55" Style="{StaticResource QQExeButtonStyle}" Canvas.Left="707" Canvas.Top="122"></Button>
+
+        <control:AyImageButton x:Name="qqpc" Visibility="Collapsed"  Height="68" Width="68" RenderMode="Manner" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01970.png"
+                               PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01971.png"
+                               HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01972.png" Canvas.Left="348" Canvas.Top="228"/>
+        <control:AyImageButton x:Name="qqanquan"  Height="68" Width="68" RenderMode="Manner" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01976.png"
+                               PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01974.png"
+                               HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01975.png" Canvas.Left="348" Canvas.Top="228"/>
+        <TextBlock x:Name="tb1" Canvas.Left="432" SnapsToDevicePixels="True" Canvas.Top="230" Foreground="White" FontSize="24"  Style="{StaticResource QQFont}" FontWeight="Bold" >安全任务</TextBlock>
+        <TextBlock x:Name="tb2" Canvas.Left="432" SnapsToDevicePixels="True" Canvas.Top="272" Foreground="#FE7D00" FontSize="14" >3</TextBlock>
+        <TextBlock x:Name="tb3" Canvas.Left="443" SnapsToDevicePixels="True" Canvas.Top="272" Foreground="#99FFFFFF" FontSize="14" >个未完成</TextBlock>
+        <TextBlock x:Name="tb4" Canvas.Left="503" SnapsToDevicePixels="True" Canvas.Top="272" Foreground="#61EBFE" FontSize="14" Cursor="Hand" MouseDown="TextBlock_MouseDown">去完成</TextBlock>
+
+        <TextBlock x:Name="tb5" Visibility="Collapsed" Canvas.Left="432" Canvas.Top="233" Foreground="White" FontSize="36"  Style="{StaticResource QQFont}" FontWeight="Bold" >15</TextBlock>
+        <TextBlock x:Name="tb6" Visibility="Collapsed" Canvas.Left="492" Canvas.Top="248" Foreground="White" FontSize="14" >天</TextBlock>
+        <TextBlock x:Name="tb7" Visibility="Collapsed" Canvas.Left="433" Canvas.Top="272" Foreground="#99FFFFFF" FontSize="14" >实时保护你的电脑</TextBlock>
+
+
+        <control:AyImageButton x:Name="qqqq"  Height="68" Width="68" RenderMode="Manner" VerticalAlignment="Top" PressedIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01964.png"
+                               HoverIcon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01965.png"
+                               Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/01966.png" Canvas.Left="587" Canvas.Top="228"/>
+        <TextBlock x:Name="tb8" Canvas.Left="679" SnapsToDevicePixels="True" Canvas.Top="230" Foreground="White" FontSize="24"  Style="{StaticResource QQFont}" FontWeight="Bold" >账号宝</TextBlock>
+        <TextBlock x:Name="tb9" Canvas.Left="679" Canvas.Top="272" Foreground="#99FFFFFF" FontSize="14" >加固AY账号更安全</TextBlock>
+        <TextBlock x:Name="tb10" Canvas.Left="43" Canvas.Top="484" Foreground="#99FFFFFF" FontSize="14" >全网环境良好</TextBlock>
+        <TextBlock x:Name="tb11"  Canvas.Left="172" Canvas.Top="484" Foreground="White" FontSize="14" >26,975,210</TextBlock>
+        <TextBlock x:Name="tb12"  Canvas.Left="250" Canvas.Top="484" Foreground="White" FontSize="14" >个</TextBlock>
+        <TextBlock x:Name="tb13"  Canvas.Left="309" Canvas.Top="484" Foreground="White" FontSize="14" >9,495,780</TextBlock>
+        <TextBlock x:Name="tb14"  Canvas.Left="378" Canvas.Top="484" Foreground="White" FontSize="14" >个</TextBlock>
+        <control:AyIconAll Canvas.Left="280" Canvas.Top="478" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/page1_niu.png" IsBitmapImage="True"></control:AyIconAll>
+        <control:AyIconAll Canvas.Left="143" Canvas.Top="478" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/page1_ma.png" IsBitmapImage="True"></control:AyIconAll>
+
+        <Canvas Canvas.Left="500" Canvas.Top="408">
+            <control:AyImageButton x:Name="aib_softmgr"  Height="96" Width="76"  Canvas.Left="0"
+                                   RenderMode="ContentOpacity" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/btnBg.png"  >
+                <StackPanel Background="#00FFFFFF" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
+                    <control:AyImage Source="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/QQPCSoftMgr_QO.png" />
+                    <TextBlock FontSize="12" Foreground="White" Text="软件管理" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </control:AyImageButton>
+            <control:AyImageButton x:Name="aib_gameup"  Height="96" Width="76"  Canvas.Left="100"
+                                   RenderMode="ContentOpacity" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/btnBg.png"  >
+                <StackPanel Background="#00FFFFFF">
+                    <control:AyImage Source="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/QMGameSpeedup_QO.png" />
+                    <TextBlock FontSize="12" Foreground="White" Text="游戏加速" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </control:AyImageButton>
+            <control:AyImageButton x:Name="aib_leakfix"  Height="96" Width="76"  Canvas.Left="200"
+                                   RenderMode="ContentOpacity" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/btnBg.png"  >
+                <StackPanel Background="#00FFFFFF">
+                    <control:AyImage Source="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/QQPCLeakScan_QO.png" />
+                    <TextBlock FontSize="12" Foreground="White" Text="修复漏洞" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </control:AyImageButton>
+            <control:AyImageButton x:Name="aib_myphone"  Height="96" Width="76" Canvas.Left="300"
+                                   RenderMode="ContentOpacity" VerticalAlignment="Top" Icon="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/btnBg.png"  >
+                <StackPanel Background="#00FFFFFF">
+                    <control:AyImage Source="pack://application:,,,/AYQQMGR2018;component/Resources/mainbg/QQPCB2AndroidJmp_QO.png" />
+                    <TextBlock FontSize="12" Foreground="White" Text="我的手机" HorizontalAlignment="Center">
+
+                    </TextBlock>
+                </StackPanel>
+            </control:AyImageButton>
+        </Canvas>
+
+
+        <control:AyAnimationButton InitControlSection="1922*14" Click="AyAnimationButton_Click" Canvas.Top="83" Canvas.Left="54" Width="260" Height="260" IsAutoPlay="false"  Velocity="30"  FirstIndex="1188" Count="30" ImageDirectory="Contents\\Images\\img1\\"></control:AyAnimationButton>
+
+    </Canvas>
+</AyPage>

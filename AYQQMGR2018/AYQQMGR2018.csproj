@@ -1,0 +1,1235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15D1518C-8FC7-4124-890A-E7BCF2417D1D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AYQQMGR2018</RootNamespace>
+    <AssemblyName>AYQQMGR2018</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ay.MvcFramework, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Ay.MvcFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ay.MvcFramework.Animation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Ay.MvcFramework.Animation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ay.MvcFramework.AyFunc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Ay.MvcFramework.AyFunc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ay.MvcFramework.Config, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Ay.MvcFramework.Config.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ay.MvcFramework.CsShared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Ay.MvcFramework.CsShared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ay.MvcFramework.Pure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Ay.MvcFramework.Pure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ay.MvcFramework.Wpf, Version=7.1.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AYUILibrary\Ay.MvcFramework.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>AYUILibrary\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Microsoft.Expression.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Microsoft.Expression.Drawing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Microsoft.Expression.Interactions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\MESSAGES.cs" />
+    <Compile Include="App_Start\SESSIONS.cs" />
+    <Compile Include="Controllers\ClearGarbageController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\KillVirusController.cs" />
+    <Compile Include="Controllers\PcUpController.cs" />
+    <Compile Include="Controllers\SoftwareAnalysisController.cs" />
+    <Compile Include="Controllers\ToolBoxController.cs" />
+    <Compile Include="Controllers\ViewStartController.cs" />
+    <Compile Include="Global.asax.cs" />
+    <Compile Include="Models\ClearGarbageModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\IndexModel.cs" />
+    <Compile Include="Models\KillVirusModel.cs" />
+    <Compile Include="Models\PcUpModel.cs" />
+    <Compile Include="Models\SoftwareAnalysisModel.cs" />
+    <Compile Include="Models\ToolBoxModel.cs" />
+    <Compile Include="Models\ViewStartModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Views\ClearGarbage\ClearGarbageView.xaml.cs">
+      <DependentUpon>ClearGarbageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Index\IndexView.xaml.cs">
+      <DependentUpon>IndexView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KillVirus\KillVirusView.xaml.cs">
+      <DependentUpon>KillVirusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PcUp\PcUpView.xaml.cs">
+      <DependentUpon>PcUpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\AyHyberTextBlock.cs" />
+    <Compile Include="Views\Shared\AyToolBoxRightButton.cs" />
+    <Compile Include="Views\Shared\SoftMgrWindow.xaml.cs">
+      <DependentUpon>SoftMgrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\UcMainWindowToolBarIcon.xaml.cs">
+      <DependentUpon>UcMainWindowToolBarIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SoftwareAnalysis\SoftwareAnalysisView.xaml.cs">
+      <DependentUpon>SoftwareAnalysisView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolBox\ToolBoxView.xaml.cs">
+      <DependentUpon>ToolBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\_ViewStart.xaml.cs">
+      <DependentUpon>_ViewStart.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\FZLTCXHJW.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Filters\" />
+    <Folder Include="Models\Bussiness\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Contents\Language\en-us.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Contents\Language\zh-cn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Contents\Styles\AYUIProjectDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="DesignSupport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ClearGarbage\ClearGarbageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Index\IndexView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KillVirus\KillVirusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PcUp\PcUpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Shared\SoftMgrWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Shared\UcMainWindowToolBarIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SoftwareAnalysis\SoftwareAnalysisView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToolBox\ToolBoxView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\_ViewStart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\Config\application.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contents\Config\pathicon.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\Themes\thumb\a景观\默认.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Themes\big\a景观\默认.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Resources\03545.png" />
+    <Resource Include="Resources\03546.png" />
+    <Resource Include="Resources\03547.png" />
+    <Resource Include="Resources\03548.png" />
+    <Resource Include="Resources\03549.png" />
+    <Resource Include="Resources\03550.png" />
+    <Resource Include="Resources\03552.png" />
+    <Resource Include="Resources\03553.png" />
+    <Resource Include="Resources\03554.png" />
+    <Resource Include="Resources\03556.png" />
+    <Resource Include="Resources\03557.png" />
+    <Resource Include="Resources\03558.png" />
+    <Resource Include="Resources\03560.png" />
+    <Resource Include="Resources\03561.png" />
+    <Resource Include="Resources\03562.png" />
+    <Resource Include="Resources\06221.png" />
+    <Resource Include="Resources\06222.png" />
+    <Resource Include="Resources\11845.png" />
+    <Resource Include="Resources\11846.png" />
+    <Resource Include="Resources\11847.png" />
+    <Resource Include="Resources\11848.png" />
+    <Resource Include="Resources\11849.png" />
+    <Resource Include="Resources\11850.png" />
+    <Resource Include="Resources\11994.png" />
+    <Resource Include="Resources\be\1.png" />
+    <Resource Include="Resources\be\bottomr.png" />
+    <Resource Include="Resources\be\bottomright.png" />
+    <Resource Include="Resources\be\cen.png" />
+    <Resource Include="Resources\be\lb.png" />
+    <Resource Include="Resources\be\lt.png" />
+    <Resource Include="Resources\be\rb.png" />
+    <Resource Include="Resources\be\rt.png" />
+    <Resource Include="Resources\be\topl.png" />
+    <Resource Include="Resources\be\topLeft.png" />
+    <Resource Include="Resources\check\radioCheck1.png" />
+    <Resource Include="Resources\check\radioCheck2.png" />
+    <Resource Include="Resources\check\radioCheck3.png" />
+    <Resource Include="Resources\check\radioUncheck1.png" />
+    <Resource Include="Resources\check\radioUncheck2.png" />
+    <Resource Include="Resources\check\radioUncheck3.png" />
+    <Resource Include="Resources\jiasu_huojian1.png" />
+    <Resource Include="Resources\jiasu_huojian2.png" />
+    <Resource Include="Resources\mainbg\01961.png" />
+    <Resource Include="Resources\mainbg\01962.png" />
+    <Resource Include="Resources\mainbg\01963.png" />
+    <Resource Include="Resources\mainbg\01964.png" />
+    <Resource Include="Resources\mainbg\01965.png" />
+    <Resource Include="Resources\mainbg\01966.png" />
+    <Resource Include="Resources\mainbg\01967.png" />
+    <Resource Include="Resources\mainbg\01968.png" />
+    <Resource Include="Resources\mainbg\01969.png" />
+    <Resource Include="Resources\mainbg\01970.png" />
+    <Resource Include="Resources\mainbg\01971.png" />
+    <Resource Include="Resources\mainbg\01972.png" />
+    <Resource Include="Resources\mainbg\01974.png" />
+    <Resource Include="Resources\mainbg\01975.png" />
+    <Resource Include="Resources\mainbg\01976.png" />
+    <Resource Include="Resources\mainbg\03540.png" />
+    <Resource Include="Resources\mainbg\03564.png" />
+    <Resource Include="Resources\mainbg\03570.png" />
+    <Resource Include="Resources\mainbg\03572.png" />
+    <Resource Include="Resources\mainbg\03592.png" />
+    <Resource Include="Resources\mainbg\03596.png" />
+    <Resource Include="Resources\mainbg\06073.png" />
+    <Resource Include="Resources\mainbg\06074.png" />
+    <Resource Include="Resources\mainbg\06075.png" />
+    <Resource Include="Resources\mainbg\06077.png" />
+    <Resource Include="Resources\mainbg\06078.png" />
+    <Resource Include="Resources\mainbg\06079.png" />
+    <Resource Include="Resources\mainbg\06223.png" />
+    <Resource Include="Resources\mainbg\06778.png" />
+    <Resource Include="Resources\mainbg\06780.png" />
+    <Resource Include="Resources\mainbg\06781.png" />
+    <Resource Include="Resources\mainbg\06782.png" />
+    <Resource Include="Resources\mainbg\07314.png" />
+    <Resource Include="Resources\mainbg\07315.png" />
+    <Resource Include="Resources\mainbg\12055.png" />
+    <Resource Include="Resources\mainbg\12056.png" />
+    <Resource Include="Resources\mainbg\12057.png" />
+    <Resource Include="Resources\mainbg\12058.png" />
+    <Resource Include="Resources\mainbg\12059.png" />
+    <Resource Include="Resources\mainbg\12060.png" />
+    <Resource Include="Resources\mainbg\12061.png" />
+    <Resource Include="Resources\mainbg\12062.png" />
+    <Resource Include="Resources\mainbg\12063.png" />
+    <Resource Include="Resources\mainbg\12064.png" />
+    <Resource Include="Resources\mainbg\12065.png" />
+    <Resource Include="Resources\mainbg\12066.png" />
+    <Resource Include="Resources\mainbg\12187.png" />
+    <Resource Include="Resources\mainbg\12188.png" />
+    <Resource Include="Resources\mainbg\12189.png" />
+    <Resource Include="Resources\mainbg\12190.png" />
+    <Resource Include="Resources\mainbg\12191.png" />
+    <Resource Include="Resources\mainbg\12192.png" />
+    <Resource Include="Resources\mainbg\btnBg.png" />
+    <Resource Include="Resources\mainbg\FileClean.png" />
+    <Resource Include="Resources\mainbg\GameBoxPlugin_QO.png" />
+    <Resource Include="Resources\mainbg\MalClean.png" />
+    <Resource Include="Resources\mainbg\page1_ma.png" />
+    <Resource Include="Resources\mainbg\page1_niu.png" />
+    <Resource Include="Resources\mainbg\QMGameSpeedup_QO.png" />
+    <Resource Include="Resources\mainbg\QMHealthAssist_QO.png" />
+    <Resource Include="Resources\mainbg\QQPCB2AndroidJmp_QO.png" />
+    <Resource Include="Resources\mainbg\QQPCClinic_QO.png" />
+    <Resource Include="Resources\mainbg\QQPCLeakScan_QO.png" />
+    <Resource Include="Resources\mainbg\QQPCSoftMgr_QO.png" />
+    <Resource Include="Resources\mainbg\SysSlim.png" />
+    <Resource Include="Resources\softana.png" />
+    <Resource Include="Resources\softbg.png" />
+    <Resource Include="Resources\toolbox\changyong\HWPlugin.png" />
+    <Resource Include="Resources\toolbox\changyong\IEStartPage.png" />
+    <Resource Include="Resources\toolbox\changyong\QMGameSpeedup.png" />
+    <Resource Include="Resources\toolbox\changyong\QMNetSpeedTest.png" />
+    <Resource Include="Resources\toolbox\changyong\QQPCB1AndroidJmp.png" />
+    <Resource Include="Resources\toolbox\changyong\QQPCClinic.png" />
+    <Resource Include="Resources\toolbox\changyong\QQPCLeakScan.png" />
+    <Resource Include="Resources\toolbox\changyong\QQPCSoftMgr.png" />
+    <Resource Include="Resources\toolbox\o\j1.png" />
+    <Resource Include="Resources\toolbox\o\j2.png" />
+    <Resource Include="Resources\toolbox\o\j3.png" />
+    <Resource Include="Resources\toolbox\o\jia1.png" />
+    <Resource Include="Resources\toolbox\o\jia2.png" />
+    <Resource Include="Resources\toolbox\o\jia3.png" />
+    <Resource Include="Resources\toolbox\o\w1.png" />
+    <Resource Include="Resources\toolbox\o\w2.png" />
+    <Resource Include="Resources\toolbox\o\w3.png" />
+    <Resource Include="Resources\toolbox\o\z1.png" />
+    <Resource Include="Resources\toolbox\o\z2.png" />
+    <Resource Include="Resources\toolbox\o\z3.png" />
+    <Resource Include="Resources\toolbox\qita\AppMarketPlugin.png" />
+    <Resource Include="Resources\toolbox\qita\FileSmash.png" />
+    <Resource Include="Resources\toolbox\qita\KingRoot.png" />
+    <Resource Include="Resources\toolbox\qita\MenuManager.png" />
+    <Resource Include="Resources\toolbox\qita\PhotoCraftPlugin.png" />
+    <Resource Include="Resources\toolbox\qita\QMHealthAssist.png" />
+    <Resource Include="Resources\toolbox\qita\QQPCB2AndroidJmp.png" />
+    <Resource Include="Resources\toolbox\qita\qqpcweiyundiskjmp.png" />
+    <Resource Include="Resources\toolbox\qita\RemoteAssistance.png" />
+    <Resource Include="Resources\toolbox\qita\TencentNews.png" />
+    <Resource Include="Resources\toolbox\qita\Win10Tips.png" />
+    <Resource Include="Resources\toolbox\ruanjian\qqpcuninstalljump.png" />
+    <Resource Include="Resources\toolbox\ruanjian\qqpcupgradejump.png" />
+    <Resource Include="Resources\toolbox\ruanjian\SoftMove.png" />
+    <Resource Include="Resources\toolbox\shangwang\NetMon.png" />
+    <Resource Include="Resources\toolbox\shangwang\QMAdBlock.png" />
+    <Resource Include="Resources\toolbox\shangwang\QMAdFilter.png" />
+    <Resource Include="Resources\toolbox\shangwang\QMArpMgr.png" />
+    <Resource Include="Resources\toolbox\shangwang\QMDnsPlugin.png" />
+    <Resource Include="Resources\toolbox\shangwang\QMNetConnect.png" />
+    <Resource Include="Resources\toolbox\shangwang\QMNetflowOpti.png" />
+    <Resource Include="Resources\toolbox\shangwang\QMNetMobileFlux.png" />
+    <Resource Include="Resources\toolbox\shangwang\QMRouterPlugin.png" />
+    <Resource Include="Resources\toolbox\shangwang\QQPCClinicNet.png" />
+    <Resource Include="Resources\toolbox\shangwang\QQPCClinicNetRepair.png" />
+    <Resource Include="Resources\toolbox\shangwang\QQPCWifiSafe.png" />
+    <Resource Include="Resources\toolbox\shangwang\WechatBackup.png" />
+    <Resource Include="Resources\toolbox\shangwang\wifigx.png" />
+    <Resource Include="Resources\toolbox\toolboxh.png" />
+    <Resource Include="Resources\toolbox\xitong\DownloaderMgrUI.png" />
+    <Resource Include="Resources\toolbox\xitong\QMSysSlim.png" />
+    <Resource Include="Resources\toolbox\xitong\QQPCClinicSys.png" />
+    <Resource Include="Resources\toolbox\xitong\SysGarbageJmp.png" />
+    <Resource Include="Resources\toolbox\xitong\SysMalwareJmp.png" />
+    <Resource Include="Resources\toolbox\xitong\SysOptimize.png" />
+    <Resource Include="Resources\toolbox\xitong\SysStartupMgrJmp.png" />
+    <Resource Include="Resources\tooltraybar\1_1.png" />
+    <Resource Include="Resources\tooltraybar\1_2.png" />
+    <Resource Include="Resources\tooltraybar\2_1.png" />
+    <Resource Include="Resources\tooltraybar\2_2.png" />
+    <Resource Include="Resources\tooltraybar\3_1.png" />
+    <Resource Include="Resources\tooltraybar\3_2.png" />
+    <Resource Include="Resources\tooltraybar\4_1.png" />
+    <Resource Include="Resources\tooltraybar\4_2.png" />
+    <Resource Include="Resources\tooltraybar\5_1.png" />
+    <Resource Include="Resources\tooltraybar\5_2.png" />
+    <Resource Include="Resources\tooltraybar\6_3.png" />
+    <Resource Include="Resources\tooltraybar\6_4.png" />
+    <Resource Include="Resources\tooltraybar\fankui.png" />
+    <Resource Include="Resources\tooltraybar\fankui1.png" />
+    <Resource Include="Resources\tooltraybar\hong_1.png" />
+    <Resource Include="Resources\tooltraybar\hong_2.png" />
+    <Resource Include="Resources\tooltraybar\hong_3.png" />
+    <Resource Include="Resources\tooltraybar\jiasuhuojian.png" />
+    <Resource Include="Resources\tooltraybar\jubao.png" />
+    <Resource Include="Resources\tooltraybar\jubao1.png" />
+    <Resource Include="Resources\tooltraybar\jubaobingdu.png" />
+    <Resource Include="Resources\tooltraybar\jubaobingdu1.png" />
+    <Resource Include="Resources\tooltraybar\jubaowangzhan.png" />
+    <Resource Include="Resources\tooltraybar\jubaowangzhan1.png" />
+    <Resource Include="Resources\tooltraybar\lan_1.png" />
+    <Resource Include="Resources\tooltraybar\lan_2.png" />
+    <Resource Include="Resources\tooltraybar\lan_3.png" />
+    <Resource Include="Resources\tooltraybar\miandarao.png" />
+    <Resource Include="Resources\tooltraybar\scan.png" />
+    <Resource Include="Resources\tooltraybar\title1.png" />
+    <Resource Include="Resources\tooltraybar\title2.png" />
+    <Resource Include="Resources\tooltraybar\tuichu.png" />
+    <Resource Include="Resources\tooltraybar\tuichu1.png" />
+    <Resource Include="Contents\Icons\ayui_48.ico" />
+    <Resource Include="Contents\Icons\softmgr.ico" />
+    <Resource Include="Contents\Icons\softmgr_notify.ico" />
+    <Resource Include="Contents\Images\11974[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11975[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11976[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11977[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11978[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11979[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11980[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11981[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11982[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11983[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11984[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11985[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11986[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11987[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11988[20x20x8BPP].png" />
+    <Resource Include="Contents\Images\11989[20x20x8BPP].png" />
+    <None Include="Contents\Images\closeWin\12193[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12194[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12195[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12196[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12197[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12198[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12199[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12200[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12201[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12202[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12203[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12204[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12205[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12206[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12207[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12208[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12209[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12210[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12211[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12212[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12213[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12214[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12215[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12216[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12217[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12218[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12219[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\closeWin\12220[70x636x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Contents\Images\demoHeader.jpg" />
+    <Resource Include="Contents\Images\dollarHover.png" />
+    <Resource Include="Contents\Images\dollarStatic.png" />
+    <None Include="Contents\Images\img1\01188[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01189[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01190[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01191[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01192[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01193[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01194[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01195[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01196[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01197[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01198[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01199[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01200[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01201[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01202[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01203[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01204[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01205[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01206[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01207[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01208[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01209[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01210[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01211[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01212[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01213[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01214[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01215[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01216[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01217[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01922[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01923[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01924[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01925[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01926[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01927[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01928[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01929[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01930[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01931[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01932[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01933[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01934[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img1\01935[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03019[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03020[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03021[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03022[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03023[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03024[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03025[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03026[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03027[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03028[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03029[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03030[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03031[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03032[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03033[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03034[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03035[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03036[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03037[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03038[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03039[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03040[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03041[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03042[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03043[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03044[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03045[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03046[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03502[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03503[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03504[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03505[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03506[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03507[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03508[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03509[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03510[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03511[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03512[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03513[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03514[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img2\03515[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06919[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06920[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06921[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06922[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06923[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06924[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06925[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06926[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06927[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06928[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06929[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06930[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06931[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06932[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06933[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06934[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06949[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06950[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06951[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06952[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06953[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06954[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06955[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06956[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06957[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06958[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06959[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06960[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06961[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img3\06962[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06181[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06182[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06183[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06184[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06185[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06186[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06187[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06188[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06189[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06190[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06191[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06192[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06193[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06194[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06195[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06196[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06197[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06198[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06199[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06200[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06201[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06202[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06203[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06204[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06205[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06206[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06207[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06208[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06209[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06210[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06211[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06212[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06213[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06214[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06215[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06216[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06217[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img4\06218[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06061[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06062[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06063[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06064[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06065[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06066[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06067[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06068[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06069[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06070[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06071[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06072[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06073[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06074[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06075[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06076[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06077[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06078[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06079[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06080[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06081[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06082[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06083[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06084[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06085[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06086[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06087[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06088[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\06089[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06040[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06041[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06042[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06043[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06044[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06045[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06046[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06047[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06048[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06049[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06050[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06051[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06052[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06053[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contents\Images\img5\running\06054[260x260x8BPP].png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Contents\Images\lv0.png" />
+    <Resource Include="Contents\Images\lv1.png" />
+    <Resource Include="Contents\Images\lv10.png" />
+    <Resource Include="Contents\Images\lv2.png" />
+    <Resource Include="Contents\Images\lv3.png" />
+    <Resource Include="Contents\Images\lv4.png" />
+    <Resource Include="Contents\Images\lv5.png" />
+    <Resource Include="Contents\Images\lv6.png" />
+    <Resource Include="Contents\Images\lv7.png" />
+    <Resource Include="Contents\Images\lv8.png" />
+    <Resource Include="Contents\Images\lv9.png" />
+    <Resource Include="Contents\Images\lvHover.png" />
+    <Resource Include="Contents\Images\lvmoon.png" />
+    <Resource Include="Contents\Images\lvstar.png" />
+    <Resource Include="Contents\Images\lvStatic.png" />
+    <Resource Include="Contents\Images\lvsun.png" />
+    <Resource Include="Contents\Images\windowmenu\11540.png" />
+    <Resource Include="Contents\Images\windowmenu\11541.png" />
+    <Resource Include="Contents\Images\windowmenu\11546.png" />
+    <Resource Include="Contents\Images\windowmenu\11547.png" />
+    <Resource Include="Contents\Images\windowmenu\11548.png" />
+    <Resource Include="Contents\Images\windowmenu\11549.png" />
+    <Resource Include="Contents\Images\windowmenu\11550.png" />
+    <Resource Include="Contents\Images\windowmenu\11551.png" />
+    <Resource Include="Contents\Images\windowmenu\11552.png" />
+    <Resource Include="Contents\Images\windowmenu\11553.png" />
+    <Resource Include="Contents\Images\windowmenu\11556.png" />
+    <Resource Include="Contents\Images\windowmenu\11557.png" />
+    <Resource Include="Contents\Images\windowmenu\11558.png" />
+    <Resource Include="Contents\Images\windowmenu\11559.png" />
+    <Resource Include="Contents\Images\windowmenu\11560.png" />
+    <Resource Include="Contents\Images\windowmenu\11561.png" />
+    <Resource Include="Contents\Images\windowmenu\11569.png" />
+    <Resource Include="Contents\Images\windowmenu\11570.png" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.Animation.dll" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.AyFunc.dll" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.Config.dll" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.CsShared.dll" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.CsShared.xml" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.dll" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.Pure.dll" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.Wpf.dll" />
+    <Content Include="AYUILibrary\Interop.SHDocVw.dll" />
+    <Content Include="AYUILibrary\Microsoft.Expression.Controls.dll" />
+    <Content Include="AYUILibrary\Microsoft.Expression.Drawing.dll" />
+    <Content Include="AYUILibrary\Microsoft.Expression.Drawing.xml" />
+    <Content Include="AYUILibrary\Microsoft.Expression.Interactions.dll" />
+    <Content Include="AYUILibrary\Newtonsoft.Json.dll" />
+    <Content Include="AYUILibrary\System.Windows.Interactivity.dll" />
+    <Content Include="AYUILibrary\System.Windows.Interactivity.xml" />
+    <Content Include="AYUILibrary\Newtonsoft.Json.xml" />
+    <Content Include="AYUILibrary\Microsoft.Expression.Interactions.xml" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.xml" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.Wpf.xml" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.Pure.xml" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.Config.xml" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.AyFunc.xml" />
+    <Content Include="AYUILibrary\Ay.MvcFramework.Animation.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
